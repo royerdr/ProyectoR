@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<web-app xmlns="http://java.sun.com/xml/ns/javaee"
+	 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	 xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+	 version="3.0">
+<!--<error-page>		
+            <error-code>500</error-code>
+            <location>/Error/error.jsp?message=Error 500   -Version de HTTP no soportado</location>
+    </error-page>   -->
+    <error-page>		
+        <error-code>505</error-code>
+        <location>/Error/error.jsp?message=Error 505-Version de HTTP no soportado</location>
+    </error-page>
+
+    <error-page>
+        <error-code>503</error-code>
+        <location>/Error/error.jsp?message=Error 503-Servicio no disponible</location>
+    </error-page>
+
+    <error-page>
+        <error-code>405</error-code>
+        <location>/Error/error.jsp?message=Error 405-La pagina get no se encuentra disponible en estos momentos</location>
+    </error-page>
+
+<!--    <error-page>
+    <error-code>404</error-code>
+    <location>/Error/error.jsp?message=Error 404-La pagina no se encuentra disponible en estos momentos</location>
+    </error-page>-->
+
+    <error-page>
+    <error-code>403</error-code>
+    <location>/Error/error.jsp?message=Error 403-La pagina prohibida</location>
+    </error-page>
+
+    <error-page>
+    <error-code>402</error-code>
+    <location>/Error/error.jsp?message=Error 402-La pagina no autorizado</location>
+    </error-page>
+
+    <error-page>
+    <error-code>400</error-code>
+    <location>/Error/error.jsp?message=Error 400-Peticion Erronea</location>
+    </error-page>     
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+    <welcome-file-list>
+        <welcome-file>index.jsp</welcome-file>
+    </welcome-file-list>    
+</web-app>
